@@ -17,7 +17,7 @@ export default function CategoryMenuDropdown({ category, history }) {
   function onChange(event) {
     const selected = event.target.value;
 
-    if (selected !== category) {
+    if (selected === category) {
       const url = selected === "all" ? "/" : `/a/${selected}`;
       history.push(url);
     }
