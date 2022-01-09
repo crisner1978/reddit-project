@@ -14,11 +14,11 @@ const Menu = styled.nav`
   }
 `;
 
-export default function CategoryMenu() {
+export default function CategoryMenu({history}) {
   const user = useStore(s => s.user);
   return (
     <Menu>
-      <CategoryMenuDropdown />
+      <CategoryMenuDropdown history={history} />
       {user && <CategoryMenuCreatePostButton />}
     </Menu>
   );
